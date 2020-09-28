@@ -1,0 +1,26 @@
+{
+    "name": "circleci",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "jest",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danielvega123/circleCI.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/danielvega123/circleCI/issues"
+    },
+    "homepage": "https://github.com/danielvega123/circleCI#readme",
+    "devDependencies": {
+        "jest": "^26.4.2"
+    }
+}
