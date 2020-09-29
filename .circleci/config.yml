@@ -16,6 +16,7 @@ jobs:
             tag: "latest,$CIRCLE_SHA1"
 orbs:
   node: circleci/node@3.0.0
+  docker: circleci/docker@1.4.0
 workflows:  
     version: 2.1
     test:
