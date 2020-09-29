@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  testNode:
+  test-node:
     executor: 
       name: node/default
       tag: '13'
@@ -25,7 +25,7 @@ workflows:
     version: 2.1
     test:
       jobs:
-        - testNode
+        - test-node
         - build-and-push:
             requires:
               - testNode
