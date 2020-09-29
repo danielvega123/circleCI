@@ -18,10 +18,16 @@ orbs:
 workflows:  
     node-tests:
       jobs:
-        - node/test
+        - node/test:
+            filters:
+              branches:
+                only:
+                  - master
         - build-and-push:
-          filters:
-            branches:
-              only:
-                - master
+            requires:
+              - node/test
+            filters:
+              branches:
+                only:
+                  - master
    
