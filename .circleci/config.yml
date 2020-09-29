@@ -2,8 +2,7 @@ version: 2.1
 jobs:
   testNode:
     executor: 
-      name: node/default
-      tag: '13'
+      name: node@3.0.0
     steps:
       - run:
           command: npm run test
@@ -20,7 +19,6 @@ jobs:
             image: leinad502/tarea8
             tag: "latest,$CIRCLE_SHA1"
 orbs:
-  - node: circleci/node@3.0.0
   docker: circleci/docker@1.4.0
 workflows:  
     version: 2.1
