@@ -3,7 +3,9 @@ jobs:
   testNode:
     executor: node/node
     steps:
-      - node/test 
+      - run:
+          command: |
+            npm test
   build-and-push:
       executor: docker/docker
       steps:
