@@ -28,7 +28,7 @@ workflows:
                 only:
                   - master
         - build-and-push:
-            require:
+            requires:
               - test
             filters:
               branches:
