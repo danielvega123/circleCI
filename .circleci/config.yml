@@ -19,13 +19,13 @@ workflows:
     node-tests:
       jobs:
         - node/test:
-          filters:
-            branches:
-              only:
-                - master
+            filters:
+              branches:
+                only:
+                  - master
         - build-and-push:
-          filters:
-            branches:
-              only:
-                - master
+            filters:
+              branches:
+                only:
+                  - master
    
