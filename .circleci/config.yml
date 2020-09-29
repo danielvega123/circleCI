@@ -2,7 +2,8 @@ version: 2.1
 jobs:
   testNode:
     executor: 
-      name: node@3.0.0
+      name: node/default
+      tag: '13'
     steps:
       - run:
           command: npm run test
