@@ -21,10 +21,10 @@ jobs:
 orbs:
   docker: circleci/docker@1.4.0
 workflows:  
-    test:
-      node-tests:
+    node-tests:
+      jobs:
         - test-node
         - build-and-push:
             requires:
-              - testNode
+              - test-node
    
