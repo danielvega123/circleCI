@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1601266578324" clover="3.2.0">
+  <project timestamp="1601266578324" name="All files">
+    <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="7" coveredelements="3" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="operation.js" path="D:\Users\Daniel\Documents\AWS\tarea8\circleCI\operation.js">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
