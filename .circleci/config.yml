@@ -2,7 +2,6 @@ version: 2.1
 jobs:
   testNode:
     executor: node/node
-    steps:
       - node/test 
   build-and-push:
       executor: docker/docker
