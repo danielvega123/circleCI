@@ -8,7 +8,8 @@
     },
     "scripts": {
         "test": "jest",
-        "start": "node server.js"
+        "start": "node server.js",
+        "cv": "jest --coverage --coverageDirectory=output/coverage/jest"
     },
     "repository": {
         "type": "git",
@@ -21,6 +22,8 @@
     },
     "homepage": "https://github.com/danielvega123/circleCI#readme",
     "devDependencies": {
-        "jest": "^26.4.2"
+        "jest": "^26.4.2",
+        "nyc": "^15.1.0",
+        "sloc": "^0.2.1"
     }
 }

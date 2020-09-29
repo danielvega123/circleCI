@@ -1,7 +1,24 @@
 version: 2.1
+jobs:
+build-and-push:
+    executor: docker/docker
+    steps:
+      - setup_remote_docker
+      - checkout
+      - docker/check
+      - docker/build:
+          image: leinad502/tarea8
+          tag: "latest,$CIRCLE_SHA1"
+      - docker/push:
+          image: leinad502/tarea8
+          tag: "latest,$CIRCLE_SHA1"
 orbs:
   node: circleci/node@3.0.0
 workflows:
   node-tests:
     jobs:
       - node/test
+      - build-and-push:
+          requires:
+            - node/test
+   
