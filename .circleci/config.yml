@@ -1,9 +1,5 @@
 version: 2.1
 jobs:
-  test:
-    executor: node/node
-    steps:
-      - node/test
   build-and-push:
       executor: docker/docker
       steps:
@@ -29,7 +25,7 @@ workflows:
                   - master
         - build-and-push:
             requires:
-              - test
+              - node/test
             filters:
               branches:
                 only:
