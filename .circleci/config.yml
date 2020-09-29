@@ -1,8 +1,7 @@
 version: 2.1
 jobs:
   testNode:
-    -node/test
-
+    - node/test
   build-and-push:
       executor: docker/docker
       steps:
@@ -18,8 +17,11 @@ jobs:
 orbs:
   node: circleci/node@3.0.0
 workflows:  
-    jobs:
-      - build-and-push:
-          requires:
-            - node/test
+    version: 2.1
+    test:
+      jobs:
+        - testNode
+        - build-and-push:
+            requires:
+              - testNode
    
