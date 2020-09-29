@@ -9,5 +9,5 @@ http.createServer(function(req, res) {
     var a = Number(q.num1)
     var b = Number(q.num2)
     var result = require('./operation').addNumer(a, b)
-    res.end(result.toString())
-}).listen(8080)
+    res.end("sum: " + result.toString())
+}).listen(80)
