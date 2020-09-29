@@ -6,5 +6,5 @@ RUN npm install --production
 FROM gcr.io/distroless/nodejs
 COPY --from=build-env /app /app
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
 CMD ["server.js"]
