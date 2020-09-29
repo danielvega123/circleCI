@@ -2,6 +2,7 @@ version: 2.1
 jobs:
   testNode:
     executor: node/node
+    steps:
       - node/test 
   build-and-push:
       executor: docker/docker
@@ -16,8 +17,8 @@ jobs:
             image: leinad502/tarea8
             tag: "latest,$CIRCLE_SHA1"
 orbs:
-  - node: circleci/node@3.0.0
-  - docker: circleci/docker@1.4.0
+  node: circleci/node@3.0.0
+  docker: circleci/docker@1.4.0
 workflows:  
     version: 2.1
     test:
