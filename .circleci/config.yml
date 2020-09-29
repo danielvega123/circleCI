@@ -12,6 +12,19 @@ jobs:
         - docker/push:
             image: leinad502/tarea8
             tag: "latest,$CIRCLE_SHA1"
+  deploy:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            pip install ecs-deploy
+      - run:
+          name: Deploy
+          command: |
+            ecs deploy $ECS_CLUSTER_NAME $ECS_SERVICE --image website-service trambocloud/nginx:$CIRCLE_SHA1 --timeout 1200 --ignore-warnings --region $AWS_REGION
 orbs:
   docker: circleci/docker@1.4.0
   node: circleci/node@3.0.0
@@ -30,4 +43,7 @@ workflows:
               branches:
                 only:
                   - master
+        - deploy:
+            requires:
+              - build-and-push
    
