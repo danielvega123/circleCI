@@ -7,3 +7,7 @@
 exports.addNumer = function(a, b) {
     return a + b
 }
+
+exports.mulNumber = function(a, b) {
+    return a * b
+}
