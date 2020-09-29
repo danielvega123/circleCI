@@ -1,4 +1,4 @@
-/* http: //localhost:8080/?num1=2&num2=2*/
+/* http: //localhost:8080/?num1=2&num2=2 */
 
 var http = require('http')
 var url = require('url')
@@ -9,5 +9,5 @@ http.createServer(function(req, res) {
     var a = Number(q.num1)
     var b = Number(q.num2)
     var result = require('./operation').addNumer(a, b)
-    res.end(result.toString())
+    res.end("sum: " + result.toString())
 }).listen(8080)
