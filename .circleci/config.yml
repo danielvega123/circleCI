@@ -2,8 +2,7 @@ version: 2.1
 jobs:
   test-node:
     executor: 
-      name: node/default
-      tag: '13'
+      name: circleci/node@3.0.0
     steps:
       - run:
           command: npm run test
@@ -22,9 +21,8 @@ jobs:
 orbs:
   docker: circleci/docker@1.4.0
 workflows:  
-    version: 2.1
     test:
-      jobs:
+      node-tests:
         - test-node
         - build-and-push:
             requires:
